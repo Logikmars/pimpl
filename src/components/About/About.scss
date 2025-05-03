@@ -1,0 +1,24 @@
+.About{
+    width: 100%;
+    font-family: 'Passion';
+    font-size: 130px;
+    flex-wrap: wrap;
+    text-align: left;
+    @media(max-width: 1000px){
+        font-size: 72px;
+    }
+    @media(max-width: 630px){
+        font-size: 42px;
+    }
+    &_orange{
+        font-family: 'Passion';
+        font-size: 130px; 
+        color: #FF8E00;
+        @media(max-width: 1000px){
+            font-size: 72px;
+        }
+        @media(max-width: 630px){
+            font-size: 42px;
+        }
+    }
+}
