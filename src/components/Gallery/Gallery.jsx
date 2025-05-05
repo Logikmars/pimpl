@@ -74,7 +74,13 @@ export default () => {
     return (
     <div className='Gallery'>
         <div className='Gallery_video' id='Video'>
-            <img src="/img/galleryVideo.png" alt="" />
+        <video
+            src="/img/vid.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+        />
         </div>
         <div className='Gallery_wrapper container'>
             <div className='Gallery_items' id='Wall'>
