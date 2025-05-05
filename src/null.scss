@@ -133,6 +133,11 @@ scroll-behavior: smooth;
 overflow-x: hidden;
 font-family: 'Passion';
 background-color: #000;
+scrollbar-width: none; /* Firefox */
+-ms-overflow-style: none;  /* IE/Edge */
+&::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 }
 
 .container{

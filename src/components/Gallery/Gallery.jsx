@@ -73,11 +73,11 @@ export default () => {
     
     return (
     <div className='Gallery'>
-        <div className='Gallery_video'>
+        <div className='Gallery_video' id='Video'>
             <img src="/img/galleryVideo.png" alt="" />
         </div>
         <div className='Gallery_wrapper container'>
-            <div className='Gallery_items'>
+            <div className='Gallery_items' id='Wall'>
                 <div className='Gallery_items_left'>
                     {
                         firstLine.map((el, index) => (
