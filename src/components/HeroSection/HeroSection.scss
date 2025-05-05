@@ -1,4 +1,4 @@
-.HeroSection{
+.HeroSection {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -6,61 +6,73 @@
     overflow: hidden;
     flex-wrap: wrap;
     margin-bottom: 160px !important;
-    @media(max-width: 1000px){
+
+    @media(max-width: 1000px) {
         margin-bottom: 60px !important;
     }
-    &_decor{
+
+    &_decor {
         width: 100%;
         height: calc(100vh - 250px);
         display: flex;
         justify-content: center;
-        align-items: start;
+        align-items: center;
         min-height: 521px;
-        @media(max-width: 850px){
+
+        @media(max-width: 850px) {
+            transform: rotate(90deg);
+        }
+
+        @media(max-width: 850px) {
             min-height: 800px;
             max-height: 800px;
         }
-        &_container{
-            width: 100% !important;
-            height: 100% !important;
-        }
-        &_black{
+
+        &_black {
             min-width: 100vw !important;
             height: 30px !important;
             background-color: #FFF;
             z-index: 999;
-            &_Top{
+
+            &_Top {
                 bottom: 300px;
                 left: 1800px;
             }
-            &_Bottom{
+
+            &_Bottom {
                 top: 300px;
                 right: 50vw;
             }
         }
-        &_img{
-            min-width: 100% !important;
-            height: 100% !important;
-            img{
-                min-width: 100%;
-            }
-            @media(max-width: 850px){
-                rotate: 90deg;
-                img{
-                    min-height: 220px;
-                    max-height: 220px;
-                    min-width: 650px;
-                    max-width: 650px;
-                }
+
+        &_imgWrapper {
+            box-shadow: inset 0px 0px 100px #000, inset 0px 0px 20px #000, inset 0px 0px 50px #000;
+
+
+        }
+
+        img {
+            z-index: -1;
+            position: relative;
+            width: 100%;
+
+
+            @media(max-width: 850px) {
+                min-height: 220px;
+                max-height: 220px;
+                min-width: 650px;
+                max-width: 650px;
             }
         }
     }
-    &_btn{
+
+    &_btn {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        &_el{
+
+        &_el {
             background-color: #FF8E00;
             display: flex;
             justify-content: center;
@@ -73,21 +85,26 @@
             text-transform: uppercase;
             cursor: pointer;
             transition: color 300ms, background-color 300ms;
-            img{
+
+            img {
                 width: 40px;
                 transition: filter 300ms;
             }
-            &:hover{
+
+            &:hover {
                 background-color: #000;
                 color: #FFF;
-                img{
+
+                img {
                     filter: invert(1);
                 }
             }
-            @media(max-width: 550px){
+
+            @media(max-width: 550px) {
                 padding: 25px;
                 font-size: 32px;
-                img{
+
+                img {
                     width: 25px;
                 }
             }
