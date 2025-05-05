@@ -1,0 +1,31 @@
+.Footer{
+    background-color: #191919;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 64px;
+        padding: 67px 10px;
+        @media(max-width: 750px){
+            gap: 24px;
+        }
+        @media(max-width: 600px){
+            flex-wrap: wrap;
+        }
+        a{
+            font-size: 32px;
+            font-family: 'Passion';
+            &:hover{
+                color: rgba($color: #FFFFFF, $alpha: .8);
+            }
+            @media(max-width: 600px){
+                font-size: 24px;
+            }
+        }
+    }
+}

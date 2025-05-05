@@ -9,7 +9,7 @@ export default () => {return (
                 <div className='Header_left_nav'>
                     {
                         ['About', 'Video', 'Wall'].map((el) => (
-                            <a href="#">{el}</a>
+                            <a href={`#${el}`} key={`header_link_${el}`}>{el}</a>
                         ))
                     }
                 </div>
@@ -17,7 +17,7 @@ export default () => {return (
             <div className='Header_right'>
                 {
                     ['x', 'tg', 'dex'].map((el) => (
-                        <a href="#" className='Header_right_link'>
+                        <a href="#" className='Header_right_link' key={`header_link_right_${el}`}>
                             <img src={`/img/${el}.svg`} alt="" />
                         </a>
                     ))

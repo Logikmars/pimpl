@@ -6,12 +6,20 @@
     overflow: hidden;
     flex-wrap: wrap;
     margin-bottom: 160px !important;
+    @media(max-width: 1000px){
+        margin-bottom: 60px !important;
+    }
     &_decor{
         width: 100%;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 250px);
         display: flex;
         justify-content: center;
         align-items: start;
+        min-height: 521px;
+        @media(max-width: 850px){
+            min-height: 800px;
+            max-height: 800px;
+        }
         &_container{
             width: 100% !important;
             height: 100% !important;

@@ -4,21 +4,63 @@
     font-size: 130px;
     flex-wrap: wrap;
     text-align: left;
+    line-height: 170px;
+    padding: 0px 15px;
+    div{
+        font-family: 'Passion';
+        font-size: 130px;
+        @media(max-width: 1000px){
+            font-size: 72px;
+            line-height: 120px;
+        }
+        @media(max-width: 650px){
+            font-size: 42px;
+            line-height: 70px;
+        }
+        @media(max-width: 420px){
+            font-size: 32px;
+            line-height: 50px;
+        }
+    }
     @media(max-width: 1000px){
         font-size: 72px;
+        line-height: 120px;
     }
-    @media(max-width: 630px){
+    @media(max-width: 650px){
         font-size: 42px;
+        line-height: 70px;
+    }
+    @media(max-width: 420px){
+        font-size: 32px;
+        line-height: 50px;
     }
     &_orange{
         font-family: 'Passion';
         font-size: 130px; 
         color: #FF8E00;
+        &_1{
+            padding-left: 40%;
+            font-family: 'Passion';
+            font-size: 130px; 
+            color: #FF8E00;
+            @media(max-width: 1000px){
+                font-size: 72px;
+            }
+            @media(max-width: 650px){
+                font-size: 42px;
+            }
+            @media(max-width: 420px){
+                font-size: 32px;
+            }
+        }
         @media(max-width: 1000px){
             font-size: 72px;
         }
-        @media(max-width: 630px){
+        @media(max-width: 650px){
             font-size: 42px;
+        }
+        @media(max-width: 420px){
+            font-size: 32px;
         }
     }
 }

@@ -1,0 +1,128 @@
+.GalleryItem{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    min-width: 80px;
+    img{
+        width: 100%;
+    }
+
+    &_bigImg{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: -1;
+        top: 0px;
+        left: 0px;
+        background-color: rgba($color: #000000, $alpha: .5);
+        opacity: 0;
+        transition: opacity 300ms;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-content: space-between;
+        &_opened{
+            opacity: 1;
+            z-index: 999999999;
+        }
+
+        &_top{
+            width: 100%;
+            padding: 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &_close{
+                padding: 20px 10px;
+                background-color: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 25px;
+                transition: background-color 300ms;
+                cursor: pointer;
+                &:hover{
+                    background-color: #000;
+                }
+                &_span{
+                    width: 10px;
+                    height: 2px;
+                    background-color: #FFF;
+                    &_1{
+                        position: relative;
+                        rotate: 45deg;
+                        left: 5px;
+                    }
+                    &_2{
+                        position: relative;
+                        rotate: -45deg;
+                        right: 5px;
+                    }
+                }
+            }
+            &_download{
+                font-family: 'Passion';
+                text-transform: uppercase;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 20px;
+                background-color: #FF8E00;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: background-color 300ms, color 300ms;
+                &:hover{
+                    background-color: #FFF;
+                    color: #000;
+                }
+            }
+        }
+        &_middle{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 25%;
+                border-radius: 10px;
+                box-shadow: 0 7px 12px rgba($color: #000000, $alpha: .7);
+                min-width: 250px;
+            }
+        }
+        &_bottom{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            gap: 20px;
+            position: relative;
+            z-index: 9999;
+            &_inc,
+            &_dec{
+                width: 60px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                user-select: none;
+                background-color: #FF8E00;
+                border-radius: 50px;
+                img{
+                    transition: filter 300ms;
+                }
+                &:hover{
+                    img{
+                        filter: invert(1);
+                    }
+                }
+            }
+        }
+    }
+}

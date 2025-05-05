@@ -1,0 +1,81 @@
+.Gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    gap: 150px;
+    margin-bottom: 130px;
+    @media(max-width: 1000px){
+        margin-bottom: 60px;
+        margin-top: 60px;
+        gap: 60px;
+    }
+    &_video{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100%;
+        }
+    }
+    &_wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 150px;
+        @media(max-width: 1000px){
+            gap: 60px;
+        }
+    }
+    &_items{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 44px;
+        @media(max-width: 1000px){
+            gap: 22px;
+        }
+        @media(max-width: 550px){
+            gap: 12px;
+        }
+        &_left,
+        &_center,
+        &_right{
+            width: calc(33% - 44px);
+            gap: 44px;
+            display: flex;
+            flex-wrap: wrap;
+            min-width: 80px;
+            @media(max-width: 1000px){
+                gap: 22px;
+            }
+            @media(max-width: 550px){
+                gap: 12px;
+            }
+        }
+    }
+
+
+
+
+    &_text{
+        width: 100%;
+        font-family: 'Passion';
+        font-size: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 15px;
+        text-align: center;
+        @media(max-width: 800px){
+            font-size: 32px;
+        }
+        @media(max-width: 500px){
+            font-size: 24px;
+        }
+    }
+}
