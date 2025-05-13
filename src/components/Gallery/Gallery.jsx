@@ -28,7 +28,7 @@ export default () => {
 
     //     return () => ctx.revert(); // clean up
     // }, []);
-    
+
     const firstLine = [
         {
             img: '/img/gallery/1.webp'
@@ -70,45 +70,48 @@ export default () => {
             img: '/img/gallery/11.webp'
         }
     ]
-    
+
     return (
-    <div className='Gallery'>
-        <div className='Gallery_video' id='Video'>
-        <video
-            src="/img/vid.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-        />
-        </div>
-        <div className='Gallery_wrapper container'>
-            <div className='Gallery_items' id='Wall'>
-                <div className='Gallery_items_left'>
-                    {
-                        firstLine.map((el, index) => (
-                            <GalleryItem img={el.img} key={`GalleryItemFirst_${index}`} />
-                        ))
-                    }
+        <div className='Gallery'>
+            <div className='Gallery_video' id='Video'>
+                <video
+                    src="/img/vid_compressed.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    onCanPlay={(e) => e.currentTarget.play()}
+                />
+            </div>
+            <div className='Gallery_wrapper container'>
+                <div className='Gallery_items' id='Wall'>
+                    <div className='Gallery_items_left'>
+                        {
+                            firstLine.map((el, index) => (
+                                <GalleryItem img={el.img} key={`GalleryItemFirst_${index}`} />
+                            ))
+                        }
+                    </div>
+                    <div className='Gallery_items_center'>
+                        {
+                            secondLine.map((el, index) => (
+                                <GalleryItem img={el.img} key={`GalleryItemSecond_${index}`} />
+                            ))
+                        }
+                    </div>
+                    <div className='Gallery_items_right'>
+                        {
+                            thirdLine.map((el, index) => (
+                                <GalleryItem img={el.img} key={`GalleryItemthird_${index}`} />
+                            ))
+                        }
+                    </div>
                 </div>
-                <div className='Gallery_items_center'>
-                    {
-                        secondLine.map((el, index) => (
-                            <GalleryItem img={el.img} key={`GalleryItemSecond_${index}`} />
-                        ))
-                    }
-                </div>
-                <div className='Gallery_items_right'>
-                    {
-                        thirdLine.map((el, index) => (
-                            <GalleryItem img={el.img} key={`GalleryItemthird_${index}`} />
-                        ))
-                    }
+                <div className='Gallery_text'>
+                    Pimpl is not just a duck — it’s a statement. Calm above the water, a storm of ideas below.
                 </div>
             </div>
-            <div className='Gallery_text'>
-                Pimpl is not just a duck — it’s a statement. Calm above the water, a storm of ideas below.
-            </div>
         </div>
-    </div>
-)}
+    )
+}
